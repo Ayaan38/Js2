@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array Sorting and Mapping</title>
+    </head>
+    <body>
+        <h2>Javascript Array Sort</h2>
+        <button onclick="ascending()">Ascending Order</button>
+        <button onclick="descending()">Descending Order</button>
+        <p id="result"></p>
+        <script>
+            var points = [50 , 43 , 82, 1, 100, 1346]     
+            document.getElementById("result").innerHTML = points;
+            function ascending() {
+                points.sort(function(a, b){return a - b});
+                document.getElementById("result").innerHTML = points;
+            }
+            function descending() {
+                points.sort(function(a, b){return b - a});
+                document.getElementById("result").innerHTML = points;   
+            }
+             </script>
+             <h3>Mapping</h3>
+             <p>Dividing every number by 2</p>
+             <p id="value"></p>
+             <script>
+                 var numbers = [12, 16, 74, 200, 3000]
+                 function myFunctions(num) {
+                    return num / 2;
+                 }
+                 var newarray = numbers.map(myFunctions);
+                 document.getElementById("value").innerHTML = newarray;
+                 </script>
+                 <h4>Evaluation Variables</h4>
+                 <button onclick="myFunction()">Evaluate</button>
+                 <p id="solution"></p>
+ <script>
+    function myFunction() {
+        var x = 50;
+        var y = 80;
+        var a = eval("x + y") + "<br>"
+        var b = eval("2 * 2") + "<br>"
+        var c = eval("y - x") + "<br>"
+        var res = a + b + c;
+        document.getElementById("solution").innerHTML = res;
+    }
+
+ </script>
+        </body>
+</html>
